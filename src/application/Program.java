@@ -34,5 +34,20 @@ public class Program {
 			acc5.updateBalance();
 			System.out.println("Update!");
 		}
+		
+		// Test Override
+		Account acc6 = new Account(1001, "Aline", 1000.0);
+		
+		acc6.withdraw(200.0); // Método normal;
+		System.out.println(acc6.getBalance());
+		
+		Account acc7 = new SavingsAccount(10005, "Maria", 1000.0, 0.01);
+		acc7.withdraw(200.0); // Método sobrescrito;
+		System.out.println(acc7.getBalance()); 
+		
+		Account acc8 = new BusinessAccount(10008, "Joao", 1000.0, 0.01);
+		acc8.withdraw(200.0); // Método sobrescrito;
+		System.out.println(acc8.getBalance());
+		
 	}
 }
